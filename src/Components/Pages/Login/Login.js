@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import Form from 'react-bootstrap/Form';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 import './Login.css';
 
 const Login = () => {
@@ -20,6 +21,9 @@ const Login = () => {
         e.preventDefault();
         if (user) {
             console.log('congrats');
+        }
+        if (loading) {
+            <Loading></Loading>
         }
     }
 
