@@ -19,6 +19,7 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    let errorElement;
     const handleLogIn = e => {
         e.preventDefault();
         const email = emailRef.current.value;
@@ -31,6 +32,9 @@ const Login = () => {
         if (loading) {
             return <Loading></Loading>
         }
+    }
+    if (error) {
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
     // toggle regisration
     const redirectRegister = () => {
@@ -50,7 +54,7 @@ const Login = () => {
                         <label className='d-block text-start' htmlFor="password">Password</label>
                         <input ref={passwordRef} type="password" name="password" id="password" required />
                     </div>
-                    {'errorElement'}
+                    {errorElement}
                     <div className=''>
                         <button type='submit' className='btn submit-btn'>Login</button>
                     </div>
