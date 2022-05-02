@@ -1,12 +1,26 @@
 import React, { useRef } from 'react';
 import Form from 'react-bootstrap/Form';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 import './Login.css';
 
 const Login = () => {
     const emailRef = useRef();
     const passwordRef = useRef();
+    // firebase hooks
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
     const handleLogIn = e => {
+        console.log(emailRef.current.value);
+        console.log(passwordRef.current.value);
         e.preventDefault();
+        if (user) {
+            console.log('congrats');
+        }
     }
 
     return (
