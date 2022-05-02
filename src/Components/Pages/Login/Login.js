@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import Form from 'react-bootstrap/Form';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
@@ -19,6 +19,7 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
     let errorElement;
     const handleLogIn = e => {
         e.preventDefault();
@@ -40,6 +41,9 @@ const Login = () => {
     const redirectRegister = () => {
         navigate('/register');
     }
+    const forgetPassword = () => {
+        navigate('/resetpassword');
+    }
 
     return (
         <div>
@@ -59,12 +63,12 @@ const Login = () => {
                         <button type='submit' className='btn submit-btn'>Login</button>
                     </div>
                 </Form>
-                <div className='text-center py-3'>
+                <div className='text-center py-3 mt-2'>
                     <div>
                         New on Inventory Management? <button onClick={redirectRegister} className='signup-redirect'>Please Register</button>
                     </div>
-                    <div>
-                        Forget password? <button onClick={'forgetPassword'} className='signup-redirect text-danger'>Reset Here</button>
+                    <div className='mt-3'>
+                        Forget password? <button onClick={forgetPassword} className='signup-redirect text-danger'>Reset Here</button>
                     </div>
                 </div>
                 {/* <ToastContainer />

@@ -3,6 +3,7 @@ import { Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 
 const Registration = () => {
     const nameRef = useRef();
@@ -26,12 +27,14 @@ const Registration = () => {
         createUserWithEmailAndPassword(email, password);
         console.log('congratulations:)')
     }
+    if (loading) {
+        return <Loading></Loading>
+    }
     if (error) {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
     const redirectLogin = () => {
         navigate('/login');
-
     }
     return (
         <div className='container-fluid w-75 mx-auto pt-5'>
