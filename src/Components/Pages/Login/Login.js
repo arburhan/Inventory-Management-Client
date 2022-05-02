@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import Form from 'react-bootstrap/Form';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import './Login.css';
@@ -8,6 +9,7 @@ import './Login.css';
 const Login = () => {
     const emailRef = useRef();
     const passwordRef = useRef();
+    const navigate = useNavigate();
     // firebase hooks
     const [
         signInWithEmailAndPassword,
@@ -25,6 +27,10 @@ const Login = () => {
         if (loading) {
             <Loading></Loading>
         }
+    }
+    // toggle regisration
+    const redirectRegister = () => {
+        navigate('/register');
     }
 
     return (
@@ -47,7 +53,7 @@ const Login = () => {
                 </Form>
                 <div className='text-center py-3'>
                     <div>
-                        New on Inventory Management? <button onClick={'redirectRegister'} className='signup-redirect'>Please Register</button>
+                        New on Inventory Management? <button onClick={redirectRegister} className='signup-redirect'>Please Register</button>
                     </div>
                     <div>
                         Forget password? <button onClick={'forgetPassword'} className='signup-redirect text-danger'>Reset Here</button>
