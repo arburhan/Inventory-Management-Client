@@ -18,6 +18,10 @@ const ResetPassword = () => {
         const email = emailRef.current.value;
         sendPasswordResetEmail(email);
         toast('reset mail sent. please check spam or inbox');
+        toast('login please');
+        setTimeout(() => {
+            navigate('/login');
+        }, 3000);
     }
     /* if (sending) {
         return <Loading></Loading>
