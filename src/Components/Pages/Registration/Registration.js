@@ -1,38 +1,50 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import Social from '../../Shared/Social/Social';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Registration = () => {
     const nameRef = useRef();
     const emailRef = useRef();
     const passwordRef = useRef();
     const navigate = useNavigate();
+    const [agree, setAgree] = useState();
 
     // registration hooks
+    let errorElement;
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
-    let errorElement;
+    const [sendEmailVerification, verifySending, verifyError] = useSendEmailVerification(auth);
 
-    const handaleFormSubmit = e => {
+    const handaleFormSubmit = async e => {
         e.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        createUserWithEmailAndPassword(email, password);
-        console.log('congratulations:)')
+        if (agree) {
+            toast('verify mail sent. Please verify.');
+            toast('After verify . Please login.');
+            await sendEmailVerification(email);
+            await createUserWithEmailAndPassword(email, password);
+            setTimeout(() => {
+                navigate('/login');
+            }, 5000);
+        }
+        if (loading || verifySending) {
+            return <Loading></Loading>
+        }
     }
-    if (loading) {
-        return <Loading></Loading>
-    }
-    if (error) {
-        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+
+    if (error || verifyError) {
+        errorElement = <p className='text-danger'>Error: {error?.message} {verifyError?.message}</p>
     }
     const redirectLogin = () => {
         navigate('/login');
@@ -56,13 +68,12 @@ const Registration = () => {
                 <br />
                 {errorElement}
                 <div className='text-center'>
-                    {/* <div className='mt-3'>
+                    <div className='mt-3'>
                         <input className='me-2 mb-3' onClick={() => { setAgree(!agree) }} type="checkbox" name="terms" id="terms" />
                         <label className={user ? 'text-primary' : 'text-danger'} htmlFor="terms">Accept terms and conditions</label>
-                    </div> */}
+                    </div>
                     <div className=''>
-                        {/* disabled={!agree} */}
-                        <button className='btn submit-btn' type="submit">Register</button>
+                        <button disabled={!agree} className='btn submit-btn' type="submit">Register</button>
                     </div>
                 </div>
             </Form>
@@ -70,8 +81,7 @@ const Registration = () => {
                 Already have an account? <button onClick={redirectLogin} className='signup-redirect'>Please Login</button>
             </div>
             <Social></Social>
-            {/* 
-            <ToastContainer /> */}
+            <ToastContainer />
         </div>
     );
 };

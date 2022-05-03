@@ -2,6 +2,8 @@ import React, { useRef } from 'react';
 import Form from 'react-bootstrap/Form';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import Social from '../../Shared/Social/Social';
@@ -28,8 +30,17 @@ const Login = () => {
         const password = passwordRef.current.value;
         signInWithEmailAndPassword(email, password);
         if (user) {
-            navigate(from, { replace: true });
-            console.log('congrats');
+            if (user.user.emailVerified === true) {
+                navigate(from, { replace: true });
+
+            }
+            else {
+                toast('Please verify your email first');
+                navigate('/login');
+
+            }
+            console.log(user.user.emailVerified)
+
         }
         if (loading) {
             return <Loading></Loading>
@@ -72,7 +83,7 @@ const Login = () => {
                         Forget password? <button onClick={forgetPassword} className='signup-redirect text-danger'>Reset Here</button>
                     </div>
                 </div>
-                {/* <ToastContainer /> */}
+                <ToastContainer />
                 <Social></Social>
             </div>
         </div>
