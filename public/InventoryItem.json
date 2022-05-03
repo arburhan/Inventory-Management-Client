@@ -1,0 +1,139 @@
+[
+    
+    {
+        "name":"Beef",
+        "image":"https://i.ibb.co/9tf9cZy/beef.png",
+        "description":"Healthy vigorous fresh beef. There is no adulteration in it. You can rest assured it will be fresh.",
+        "quantity": 50,
+        "price": 650,
+        "company": "ar-group"
+    },
+    {
+        "name":"Dry Bread",
+        "image":"https://i.ibb.co/V2fw94M/bread.png",
+        "description":"Healthy dry bread. Made from flour, oil, sugar, salt and food preservatives. Immediately imported from the factory.",
+        "quantity": 30,
+        "price": 50,
+        "company": "ar-group"
+    },
+    {
+        "name":"Chicken Brest",
+        "image":"https://i.ibb.co/RBM57v5/Chicken.png",
+        "description":"Chicken brest made in a healthier way from home-grown chickens from the farm. Completely free of adulteration.",
+        "quantity": 40,
+        "price": 250,
+        "company": "ar-group"
+    },
+    {
+        "name":"Eggs",
+        "image":"https://i.ibb.co/s64MdNj/Egg.png",
+        "description":"A very short day egg of a native chicken. Nutritional rich and fresh.",
+        "quantity": 500,
+        "price": 15,
+        "company": "ar-group"
+    },
+    {
+        "name":"Fresh Fish",
+        "image":"https://i.ibb.co/ZMG95VG/fish.png",
+        "description":"Fresh fish produced from seas and rivers. Fresh and rich in nutritional value.",
+        "quantity": 60,
+        "price": 180,
+        "company": "ar-group"
+    },
+    {
+        "name":"Cauliflower",
+        "image":"https://i.ibb.co/n3kn69G/ful-kopi.png",
+        "description":"You can get fresh cauliflower of the farm directly from the farmer only from us.",
+        "quantity": 50,
+        "price": 95,
+        "company": "ar-group"
+    },
+    {
+        "name":"Grasp",
+        "image":"https://i.ibb.co/1Gg2RHs/grasp.png",
+        "description":"Only we have the assurance of fresh grapes in the garden. It has been released from the tree in a short time.",
+        "quantity": 10,
+        "price": 170,
+        "company": "ar-group"
+    },
+    {
+        "name":"Cumin",
+        "image":"https://i.ibb.co/Lnscgs0/jira.png",
+        "description":"We are getting dried cumin from the farm. We have collected after the production from the farmer.",
+        "quantity": 10,
+        "price": 120,
+        "company": "ar-group"
+    },
+    {
+        "name":"Olives",
+        "image":"https://i.ibb.co/YR10KwZ/jolpay.png",
+        "description":"Fresh fresh olives and dried olives are available. Marketed directly from the garden.",
+        "quantity": 15,
+        "price": 80,
+        "company": "ar-group"
+    },
+    {
+        "name":"Oranges",
+        "image":"https://i.ibb.co/cbqGprg/komola.png",
+        "description":"Completely fresh oranges from the garden. Produced in a short time and marketed in a quality way.",
+        "quantity": 20,
+        "price": 67,
+        "company": "ar-group"
+    },
+    {
+        "name":"Mashroom",
+        "image":"https://i.ibb.co/0FdYGpC/mashroom.png",
+        "description":"Fresh mushrooms produced in a completely natural way. We guarantee fresh mushrooms.",
+        "quantity": 10,
+        "price": 55,
+        "company": "ar-group"
+    },
+    {
+        "name":"Pinuts",
+        "image":"https://i.ibb.co/S5rx45H/pinut.png",
+        "description":"After taking fresh nuts directly from the farmer, they are marketed in a healthy way. Special attention is paid to quality.",
+        "quantity": 10,
+        "price": 20,
+        "company": "ar-group"
+    },
+    {
+        "name":"Pinut-Breds",
+        "image":"https://i.ibb.co/cJsdgRs/pinut-bread.png",
+        "description":"Peanut-bread is made from nuts, bread and food preservatives in a healthy way. Quality is checked regularly.",
+        "quantity": 10,
+        "price": 50,
+        "company": "ar-group"
+    },
+    {
+        "name":"Mint leaves",
+        "image":"https://i.ibb.co/D5hSD4p/pudina.png",
+        "description":"Fresh quality compliant mint leaves are supplied directly from the garden. Produced short-term and its quality is checked regularly.",
+        "quantity": 20,
+        "price": 60,
+        "company": "ar-group"
+    },
+    {
+        "name":"Cucumber",
+        "image":"https://i.ibb.co/MnpRJn8/shosha.png",
+        "description":"Fresh cucumbers are supplied directly from the farmer. Quality is checked regularly.",
+        "quantity": 25,
+        "price": 50,
+        "company": "ar-group"
+    },
+    {
+        "name":"Tomato",
+        "image":"https://i.ibb.co/2yvKLMG/tomato.png",
+        "description":"Fresh tomatoes are supplied directly from the farmer. Daily tomatoes are supplied daily.",
+        "quantity": 20,
+        "price": 25,
+        "company": "ar-group"
+    },
+    {
+        "name":"Watermelon",
+        "image":"https://i.ibb.co/Lgy0RQ3/watermelon.png ",
+        "description":"Watermelons produced in fresh natural way are supplied directly to the farmer. We guarantee the supply of sweet and fresh watermelon.",
+        "quantity": 20,
+        "price": 40,
+        "company": "ar-group"
+    }
+]
