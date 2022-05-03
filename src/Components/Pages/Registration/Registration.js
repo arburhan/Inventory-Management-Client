@@ -4,6 +4,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
+import Social from '../../Shared/Social/Social';
 
 const Registration = () => {
     const nameRef = useRef();
@@ -68,7 +69,8 @@ const Registration = () => {
             <div className='py-2 text-center mt-3'>
                 Already have an account? <button onClick={redirectLogin} className='signup-redirect'>Please Login</button>
             </div>
-            {/*  <SocialSign></SocialSign>
+            <Social></Social>
+            {/* 
             <ToastContainer /> */}
         </div>
     );
