@@ -1,0 +1,12 @@
+.google-btn {
+    padding: 15px 30px;
+    border-radius: 35px;
+}
+
+@media screen and (max-width: 668px) {
+    .google-btn {
+        padding: 10px 45px;
+        border-radius: 65px;
+    }
+
+}

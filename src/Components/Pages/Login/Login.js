@@ -4,6 +4,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
+import Social from '../../Shared/Social/Social';
 import './Login.css';
 
 const Login = () => {
@@ -71,8 +72,8 @@ const Login = () => {
                         Forget password? <button onClick={forgetPassword} className='signup-redirect text-danger'>Reset Here</button>
                     </div>
                 </div>
-                {/* <ToastContainer />
-                <SocialSign></SocialSign> */}
+                {/* <ToastContainer /> */}
+                <Social></Social>
             </div>
         </div>
     );

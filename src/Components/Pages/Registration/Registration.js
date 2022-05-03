@@ -65,7 +65,7 @@ const Registration = () => {
                     </div>
                 </div>
             </Form>
-            <div className='py-2 text-center'>
+            <div className='py-2 text-center mt-3'>
                 Already have an account? <button onClick={redirectLogin} className='signup-redirect'>Please Login</button>
             </div>
             {/*  <SocialSign></SocialSign>
