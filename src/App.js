@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Login from './Components/Pages/Login/Login';
 import Registration from './Components/Pages/Registration/Registration';
 import ResetPassword from './Components/Pages/ResetPassword/ResetPassword';
+import NotFound from './Components/Shared/NotFound/NotFound';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Registration></Registration>}></Route>
         <Route path='/resetpassword' element={<ResetPassword></ResetPassword>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );
