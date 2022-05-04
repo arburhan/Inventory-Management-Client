@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useInventory from '../../Hooks/useInventory';
 import SingleItem from './SingleItem/SingleItem';
+import './InventoryItems.css';
 
 
 const InventoryItems = () => {
@@ -14,6 +15,9 @@ const InventoryItems = () => {
                     items.slice(0, 6).map(item => <SingleItem item={item}></SingleItem>)
                 }
 
+            </div>
+            <div className='text-center pt-5'>
+                <button className='see-btn'>See All Items</button>
             </div>
         </div>
     );
