@@ -4,6 +4,7 @@
     font-size: 18px;
     border: 2px solid #ff4154;
     transition: .2s linear;
+    background-color: transparent;
 }
 
 .see-btn:hover {
