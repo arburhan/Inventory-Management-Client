@@ -1,0 +1,18 @@
+.item-card {
+    border: transparent;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    border-radius: 10px;
+}
+
+.item-card:hover {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.update-btn {
+    color: white;
+    border: 2px solid #89C748;
+    background-color: #89C748;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 18px;
+}

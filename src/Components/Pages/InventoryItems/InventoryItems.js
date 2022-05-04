@@ -13,7 +13,7 @@ const InventoryItems = () => {
     return (
         <div className='container'>
             <h2>Inventory Items</h2>
-            <div className='row row-cols-1 row-cols-md-3 g-5' >
+            <div className='row row-cols-1 row-cols-md-3 g-3' >
                 {
 
                     items.map(item => <SingleItem item={item}></SingleItem>)
