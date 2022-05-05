@@ -5,11 +5,12 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import auth from '../../firebase.init';
+import './Header.css';
 
 
 const Header = () => {
     const [user, loading, error] = useAuthState(auth);
-    console.log(user?.photoURL);
+    console.log(user);
     const logOutUser = () => {
         signOut(auth);
         console.log('js')
@@ -19,17 +20,17 @@ const Header = () => {
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand as={CustomLink} to='/' href="#home">Inventory Management</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav " />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="ms-auto">
+                        <Nav className="ms-auto align-items-center">
                             <Nav.Link as={CustomLink} to='/home' href="#home">Home</Nav.Link>
                             <Nav.Link as={CustomLink} to='/blogs' href="#blogs">Blogs</Nav.Link>
                             {
                                 !user ?
                                     <Nav.Link as={CustomLink} to='login' href="#login">Login</Nav.Link>
-                                    : < NavDropdown title="Profile" id="navbarScrollingDropdown" >
-                                        <NavDropdown.Item href="#action3">Profile</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+                                    : < NavDropdown title={user.photoURL == null ? 'Profile' : <img className='img-fluid top-img dropdown-toggle' src={user.photoURL} alt="" />} id="navbarScrollingDropdown" >
+                                        <NavDropdown.Item href="#action3">My Profile</NavDropdown.Item>
+                                        <NavDropdown.Item href="#action4">Favourite Products</NavDropdown.Item>
                                         <NavDropdown.Divider />
                                         <NavDropdown.Item href="#action5">
                                             <button className='bg-transparent border-0' onClick={logOutUser}>Logout</button>
