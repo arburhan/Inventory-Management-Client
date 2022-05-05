@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 const Inventory = () => {
+    const { id } = useParams();
+    const [item, setItem] = useState({});
+    console.log(id);
+    useEffect(() => {
+        const url = `https://sheltered-citadel-07680.herokuapp.com/inventory/${id}`;
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setItem(data))
+    }, [id]);
+
     return (
         <div>
-            <h2>Inventory :)</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere tempora perferendis officiis totam velit debitis enim tempore dolor expedita voluptates, rerum blanditiis sequi maxime. Harum quasi ullam sed porro asperiores ducimus fuga iure aperiam fugit repellat accusamus, inventore blanditiis quae magnam dolorem aliquam veniam molestiae rem recusandae modi veritatis labore nisi? Cum officia cumque omnis quos numquam blanditiis? Possimus minima esse vel ipsam odit assumenda, veniam inventore illo commodi iusto molestiae consequatur molestias? Incidunt deserunt laboriosam eius quis cumque autem numquam rem magni mollitia sapiente? Natus at vitae rem voluptatibus, pariatur deleniti rerum enim eligendi a dignissimos facere molestias quo!</p>
+            <h2>Inventory {id}</h2>
+
         </div>
     );
 };

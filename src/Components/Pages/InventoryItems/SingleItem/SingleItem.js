@@ -5,7 +5,7 @@ import './SingleItem.css';
 const SingleItem = ({ item }) => {
     const navigate = useNavigate();
     const { _id, image, name, description, quantity, price, suplier } = item;
-    const handleUpdate = () => {
+    const handleUpdate = _id => {
         navigate(`/inventory/${_id}`)
     }
     return (
@@ -20,7 +20,7 @@ const SingleItem = ({ item }) => {
                     <h5>Suplier: {suplier}</h5>
                 </div>
                 <div className='text-center py-2' >
-                    <button onClick={handleUpdate} className='update-btn' >Update</button>
+                    <button onClick={() => { handleUpdate(_id) }} className='update-btn' >Update</button>
                 </div>
             </div>
         </div>
