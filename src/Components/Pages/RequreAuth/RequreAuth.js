@@ -5,7 +5,7 @@ import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import './RequreAuth.css';
 
-const RequreAuth = () => {
+const RequreAuth = ({ children }) => {
     const [user, loading] = useAuthState(auth);
     const [sendEmailVerification, sending, error] = useSendEmailVerification(auth);
     const location = useLocation();
@@ -28,5 +28,6 @@ const RequreAuth = () => {
             {/* <ToastContainer></ToastContainer> */}
         </div>
     }
+    return children;
 }
 export default RequreAuth;
