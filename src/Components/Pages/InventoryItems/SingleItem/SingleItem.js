@@ -8,11 +8,11 @@ const SingleItem = ({ item }) => {
             <div className='card p-3 item-card'>
                 <img src={image} alt="" className='img-fluid' />
                 <div>
-                    <h2>{name}</h2>
-                    <p>{description}</p>
-                    <h4>Quantity: {quantity} Kg's</h4>
-                    <h3>Price: ${price}</h3>
-                    <h4>Company: {company}</h4>
+                    <h3>{name}</h3>
+                    <p title={description}>{description.length > 75 ? description.slice(0, 70) + '...' : description} </p>
+                    <h5>Quantity: {quantity}Kg's</h5>
+                    <h4>Price: ${price}</h4>
+                    <h5>Company: {company}</h5>
                 </div>
                 <div className='text-center py-2' >
                     <button className='update-btn' >Update</button>
