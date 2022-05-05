@@ -4,9 +4,9 @@ import './SingleItem.css';
 
 const SingleItem = ({ item }) => {
     const navigate = useNavigate();
-    const { image, name, description, quantity, price, suplier } = item;
+    const { _id, image, name, description, quantity, price, suplier } = item;
     const handleUpdate = () => {
-        navigate('/inventory')
+        navigate(`/inventory/${_id}`)
     }
     return (
         <div>

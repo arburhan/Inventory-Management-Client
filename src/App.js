@@ -23,7 +23,7 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/register' element={<Registration></Registration>}></Route>
         <Route path='/resetpassword' element={<ResetPassword></ResetPassword>}></Route>
-        <Route path='/inventory' element={
+        <Route path='/inventory/:id' element={
           <RequreAuth>
             <Inventory></Inventory>
           </RequreAuth>

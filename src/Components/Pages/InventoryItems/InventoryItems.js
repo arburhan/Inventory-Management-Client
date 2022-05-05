@@ -12,7 +12,7 @@ const InventoryItems = () => {
             <h2 className='text-center py-3'>Special Items</h2>
             <div className='row row-cols-1 row-cols-md-3 g-3' >
                 {
-                    items.slice(0, 6).map(item => <SingleItem item={item}></SingleItem>)
+                    items.map(item => <SingleItem item={item}></SingleItem>)
                 }
 
             </div>
