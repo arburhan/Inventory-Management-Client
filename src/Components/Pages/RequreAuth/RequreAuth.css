@@ -1,0 +1,19 @@
+.verify-btn {
+    padding: 15px 30px;
+    border-radius: 35px;
+    border: 2px solid #07bc0c;
+    transition: .2s linear;
+}
+
+.verify-btn:hover {
+    color: white;
+    background-color: #07bc0c;
+}
+
+@media screen and (max-width: 668px) {
+    .verify-btn {
+        padding: 10px 45px;
+        border-radius: 65px;
+    }
+
+}

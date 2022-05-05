@@ -30,16 +30,7 @@ const Login = () => {
         const password = passwordRef.current.value;
         signInWithEmailAndPassword(email, password);
         if (user) {
-            if (user.user.emailVerified === true) {
-                navigate(from, { replace: true });
-
-            }
-            else {
-                toast('Please verify your email first');
-                navigate('/login');
-
-            }
-            console.log(user.user.emailVerified)
+            navigate('/home');
 
         }
         if (loading) {
