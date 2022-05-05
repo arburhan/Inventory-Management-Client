@@ -17,7 +17,7 @@ const InventoryItems = () => {
 
             </div>
             <div className='text-center pt-5'>
-                <button className='see-btn'>See All Items</button>
+                <button className='see-btn'>Manage All Items</button>
             </div>
         </div>
     );
