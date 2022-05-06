@@ -1,0 +1,15 @@
+.manage-btn {
+    color: white;
+    padding: 10px 25px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.inventory-up {
+    background-color: #89c748;
+
+}
+
+.delete-btn {
+    background-color: #c9184a;
+}
