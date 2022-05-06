@@ -6,6 +6,7 @@ import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import auth from '../../firebase.init';
 import './Header.css';
+import avatar from '../../../Images/user.png';
 
 
 const Header = () => {
@@ -22,12 +23,14 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto align-items-center">
                             <Nav.Link as={CustomLink} to='/home' href="#home">Home</Nav.Link>
-                            <Nav.Link as={CustomLink} to='/additem' href="#additem">Add Item</Nav.Link>
+                            {
+                                !user ? undefined : <Nav.Link as={CustomLink} to='/additem' href="#additem">Add Item</Nav.Link>
+                            }
                             <Nav.Link as={CustomLink} to='/blogs' href="#blogs">Blogs</Nav.Link>
                             {
                                 !user ?
                                     <Nav.Link as={CustomLink} to='login' href="#login">Login</Nav.Link>
-                                    : < NavDropdown title={user.photoURL == null ? 'Profile' : <img className='img-fluid top-img dropdown-toggle' src={user.photoURL} alt="" />} id="navbarScrollingDropdown" >
+                                    : < NavDropdown title={user.photoURL == null ? <img className='img-fluid top-img dropdown-toggle' src={avatar} alt="" /> : <img className='img-fluid top-img dropdown-toggle' src={user.photoURL} alt="" />} id="navbarScrollingDropdown" >
                                         <NavDropdown.Item href="#action3">My Profile</NavDropdown.Item>
                                         <NavDropdown.Item href="#action4">Favourite Products</NavDropdown.Item>
                                         <NavDropdown.Divider />
