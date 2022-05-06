@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import './AddItem.css';
 
 const AddItem = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         const url = ` https://sheltered-citadel-07680.herokuapp.com/inventory`;
         fetch(url, {
@@ -15,7 +15,8 @@ const AddItem = () => {
         })
             .then(res => res.json())
             .then(result => {
-                console.log(result)
+                console.log(result);
+                reset();
             })
 
     };
