@@ -2,13 +2,16 @@ import React, { useEffect, useState } from 'react';
 import useInventory from '../../Hooks/useInventory';
 import SingleItem from './SingleItem/SingleItem';
 import './InventoryItems.css';
+import { useNavigate } from 'react-router-dom';
 
 
 const InventoryItems = () => {
     const [items, setItems] = useInventory();
+    const navigate = useNavigate();
 
     const handleAllProducts = () => {
-        console.log(':) js')
+        navigate('/manageInventory');
+
     }
     return (
         <div className='container py-3'>

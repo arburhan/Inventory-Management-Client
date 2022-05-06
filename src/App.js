@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Shared/Header/Header';
 import { Route, Routes } from 'react-router-dom';
@@ -28,7 +27,11 @@ function App() {
             <Inventory></Inventory>
           </RequreAuth>
         }></Route>
-        <Route path='/manageInventory' element={<ManageInventory></ManageInventory>}></Route>
+        <Route path='/manageInventory' element={
+          <RequreAuth>
+            <ManageInventory></ManageInventory>
+          </RequreAuth>
+        }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>

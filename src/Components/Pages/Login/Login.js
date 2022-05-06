@@ -30,7 +30,7 @@ const Login = () => {
         const password = passwordRef.current.value;
         signInWithEmailAndPassword(email, password);
         if (user) {
-            navigate('/home');
+            navigate(from, { replace: true });
 
         }
         if (loading) {
