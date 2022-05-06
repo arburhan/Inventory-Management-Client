@@ -27,6 +27,19 @@
     border: 2px solid #023047;
 }
 
+.deliver-btn {
+    color: white;
+    background-color: #02304786;
+    border: 2px solid #02304786;
+    padding: 10px 35px;
+    border-radius: 30px;
+    transition: .2s linear;
+}
+
+.deliver-btn:hover {
+    background-color: #023047;
+}
+
 .inventory-btn:hover {
     background-color: #023047;
 }
