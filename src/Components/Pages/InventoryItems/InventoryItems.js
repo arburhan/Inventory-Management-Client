@@ -7,6 +7,9 @@ import './InventoryItems.css';
 const InventoryItems = () => {
     const [items, setItems] = useInventory();
 
+    const handleAllProducts = () => {
+        console.log(':) js')
+    }
     return (
         <div className='container py-3'>
             <h2 className='text-center py-3'>Special Items</h2>
@@ -17,7 +20,7 @@ const InventoryItems = () => {
 
             </div>
             <div className='text-center pt-5'>
-                <button className='see-btn'>Manage All Items</button>
+                <button onClick={handleAllProducts} className='see-btn'>Manage All Items</button>
             </div>
         </div>
     );
