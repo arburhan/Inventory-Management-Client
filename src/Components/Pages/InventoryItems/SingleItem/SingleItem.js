@@ -6,7 +6,7 @@ const SingleItem = ({ item }) => {
     const navigate = useNavigate();
     const { _id, image, name, description, quantity, price, suplier } = item;
     const handleUpdate = _id => {
-        navigate(`/inventory/${_id}`)
+        navigate(`/inventory/${_id}`);
     }
     return (
         <div>
