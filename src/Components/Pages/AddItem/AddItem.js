@@ -6,7 +6,7 @@ const AddItem = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => console.log(data);
     return (
-        <div className='container-fluid'>
+        <div style={{ backgroundColor: '#2b2d42' }} className='container-fluid text-white pb-3'>
             <h2 className='text-center pt-4'>Add New Product</h2>
             <div className='w-75 mx-auto pt-2'>
                 <form onSubmit={handleSubmit(onSubmit)} className='text-center'>
@@ -23,7 +23,7 @@ const AddItem = () => {
                     <label className='d-block text-start' htmlFor="description">Description</label>
                     <textarea className='rounded textarea-space' name="description" id="" {...register("description")}></textarea>
                     <div className='py-2'>
-                        <button type="submit">Submit</button>
+                        <button type="submit" className='add-item-btn'>Add Item</button>
                     </div>
                 </form>
             </div>

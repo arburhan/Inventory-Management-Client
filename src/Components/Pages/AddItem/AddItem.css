@@ -2,6 +2,14 @@
     padding: 30px 230px;
 }
 
+.add-item-btn {
+    color: white;
+    background-color: tomato;
+    border: 2px solid tomato;
+    padding: 12px 30px;
+    border-radius: 30px;
+}
+
 @media screen and (max-width: 668px) {
     .textarea-space {
         padding: 30px 30px;
