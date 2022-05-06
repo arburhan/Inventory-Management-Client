@@ -10,6 +10,7 @@ import Blogs from './Components/Pages/Blogs/Blogs';
 import ManageInventory from './Components/Pages/ManageInventory/ManageInventory';
 import Inventory from './Components/Pages/Inventory/Inventory';
 import RequreAuth from './Components/Pages/RequreAuth/RequreAuth';
+import AddItem from './Components/Pages/AddItem/AddItem';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <ManageInventory></ManageInventory>
           </RequreAuth>
         }></Route>
+        <Route path='/additem' element={<AddItem></AddItem>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>

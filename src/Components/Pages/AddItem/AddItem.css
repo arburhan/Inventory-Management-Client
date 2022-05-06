@@ -1,0 +1,10 @@
+.textarea-space {
+    padding: 30px 230px;
+}
+
+@media screen and (max-width: 668px) {
+    .textarea-space {
+        padding: 30px 30px;
+    }
+
+}

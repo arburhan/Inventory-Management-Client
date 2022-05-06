@@ -22,6 +22,7 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto align-items-center">
                             <Nav.Link as={CustomLink} to='/home' href="#home">Home</Nav.Link>
+                            <Nav.Link as={CustomLink} to='/additem' href="#additem">Add Item</Nav.Link>
                             <Nav.Link as={CustomLink} to='/blogs' href="#blogs">Blogs</Nav.Link>
                             {
                                 !user ?
