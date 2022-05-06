@@ -15,7 +15,7 @@ const SingleItem = ({ item }) => {
                 <div>
                     <h3>{name}</h3>
                     <p title={description}>{description.length > 75 ? description.slice(0, 70) + '...' : description} </p>
-                    <h5>Quantity: {quantity}Kg's</h5>
+                    <h5>Quantity: {quantity}pc's</h5>
                     <h4>Price: ${price}</h4>
                     <h5>Suplier: {suplier}</h5>
                 </div>
