@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import './Inventory.modules.css';
 
@@ -15,6 +15,10 @@ const Inventory = () => {
     const handleAllProducts = () => {
         navigate('/manageInventory');
 
+    }
+    const handleUpdateUser = e => {
+        const quantity = e.target.quantity.value;
+        console.log(quantity);
     }
 
     return (
@@ -37,10 +41,10 @@ const Inventory = () => {
                             </div>
                             <hr />
                             <div className='py-2'>
-                                <div className='py-3'>
-                                    <input type="number" className='w-50' />
-                                    <button className='top-btn inventory-btn ms-3'>Add</button>
-                                </div>
+                                <form className='py-4 form-parent' onSubmit={handleUpdateUser}>
+                                    <input placeholder='Quantity' type="number" name="quantity" className='w-50 me-2' required />
+                                    <input className='inventory-btn w-75 w-md-50 mt-3 mt-md-0' type="submit" value="Add Quantity" />
+                                </form>
                                 <div className='pt-3'>
                                     <button onClick={handleAllProducts} className="see-btn inventory-see">Manage All Items</button>
                                 </div>
