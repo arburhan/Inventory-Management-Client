@@ -32,11 +32,11 @@ const Inventory = () => {
                             <h5>Quantity: {item.quantity} pc's</h5>
                             <h4>Price: ${item.price}</h4>
                             <h5>Sold: <span className='text-warning'>No</span></h5>
+                            <div className='py-2'>
+                                <button className='deliver-btn' >Delivered</button>
+                            </div>
                             <hr />
                             <div className='py-2'>
-                                <div className='py-2'>
-                                    <button className='deliver-btn' >Delivered</button>
-                                </div>
                                 <div className='py-3'>
                                     <input type="number" className='w-50' />
                                     <button className='top-btn inventory-btn ms-3'>Add</button>
