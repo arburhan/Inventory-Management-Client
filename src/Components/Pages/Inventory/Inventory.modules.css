@@ -30,12 +30,12 @@
 }
 
 .inventory-btn {
+    color: white;
     background-color: rgb(175, 182, 182);
     border: 2px solid #023047;
 }
 
 .inventory-btn:hover {
-    color: white;
     background-color: #023047;
 }
 

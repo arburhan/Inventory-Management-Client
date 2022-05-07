@@ -5,6 +5,7 @@ import './Inventory.modules.css';
 const Inventory = () => {
     const { id } = useParams();
     const [item, setItem] = useState({});
+    const { name, email, quantity, suplier, price, image, description } = item;
     const navigate = useNavigate();
     useEffect(() => {
         const url = `https://sheltered-citadel-07680.herokuapp.com/inventory/${id}`;
@@ -17,8 +18,27 @@ const Inventory = () => {
 
     }
     const handleUpdateUser = e => {
-        const quantity = e.target.quantity.value;
-        console.log(quantity);
+        e.preventDefault();
+        const valuQuantity = parseInt(e.target.quantity.value);
+        const newQuantity = quantity + valuQuantity;
+        const newItem = { ...item, quantity: newQuantity };
+        setItem(newItem);
+        console.log(valuQuantity)
+        const url = `https://sheltered-citadel-07680.herokuapp.com/inventory/${id}`;
+        console.log(url);
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newItem)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                // e.target.reset();
+            })
+
     }
 
     return (
@@ -27,14 +47,14 @@ const Inventory = () => {
                 <div className='inventory-card'>
                     <div className='inventory-card2'>
                         <div className='py-2 px-4 text-light'>
-                            <img style={{ width: '250px' }} src={item.image} className="img-fluid" alt="" />
+                            <img style={{ width: '250px' }} src={image} className="img-fluid" alt="" />
                             <p>Product Id:  {id}</p>
                             <hr />
-                            <h2>{item.name}</h2>
-                            <p className='fs-6'><span className='fs-5'>Description:</span> {item.description}</p>
-                            <h5>Suplier: {item.suplier}</h5>
-                            <h5>Quantity: {item.quantity} pc's</h5>
-                            <h4>Price: ${item.price}</h4>
+                            <h2>{name}</h2>
+                            <p className='fs-6'><span className='fs-5'>Description:</span> {description}</p>
+                            <h5>Suplier: {suplier}</h5>
+                            <h5>Quantity: {quantity} pc's</h5>
+                            <h4>Price: ${price}</h4>
                             <h5>Sold: <span className='text-warning'>No</span></h5>
                             <div className='py-2'>
                                 <button className='deliver-btn' >Delivered</button>
@@ -43,7 +63,7 @@ const Inventory = () => {
                             <div className='py-2'>
                                 <form className='py-4 form-parent' onSubmit={handleUpdateUser}>
                                     <input placeholder='Quantity' type="number" name="quantity" className='w-50 me-2' required />
-                                    <input className='inventory-btn w-75 w-md-50 mt-3 mt-md-0' type="submit" value="Add Quantity" />
+                                    <input className='inventory-btn w-75 w-md-50 mt-3 mt-md-0' type="submit" value="Restock Now" />
                                 </form>
                                 <div className='pt-3'>
                                     <button onClick={handleAllProducts} className="see-btn inventory-see">Manage All Items</button>
