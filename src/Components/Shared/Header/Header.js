@@ -29,6 +29,9 @@ const Header = () => {
                             {
                                 !user ? undefined : <Nav.Link as={CustomLink} to='/manageInventory' href="#manageInventory">Manage Items</Nav.Link>
                             }
+                            {
+                                !user ? undefined : <Nav.Link as={CustomLink} to='/myitems' href="#myitems">My Items</Nav.Link>
+                            }
                             <Nav.Link as={CustomLink} to='/blogs' href="#blogs">Blogs</Nav.Link>
                             {
                                 !user ?
