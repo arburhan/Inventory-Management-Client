@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const AddItem = () => {
     const { register, handleSubmit, reset } = useForm();
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const onSubmit = data => {
         const url = ` https://sheltered-citadel-07680.herokuapp.com/inventory`;
         fetch(url, {

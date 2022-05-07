@@ -46,10 +46,9 @@ const Inventory = () => {
     const handleUpdateUser = e => {
         e.preventDefault();
         const valuQuantity = parseInt(e.target.quantity.value);
-        let newQuantity = quantity + valuQuantity;
+        let newQuantity = parseInt(quantity) + valuQuantity;
         const newItem = { ...item, quantity: newQuantity };
         setItem(newItem);
-        console.log(valuQuantity)
         const url = `https://sheltered-citadel-07680.herokuapp.com/inventory/${id}`;
         console.log(url);
         fetch(url, {
