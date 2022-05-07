@@ -1,0 +1,33 @@
+.parent-stock {
+    background-image: url(./bg-3.jpg);
+    background-repeat: no-repeat;
+    padding: 80px 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.category-singleDiv {
+    padding-right: 50px;
+    border-right: 3px solid;
+}
+
+@media screen and (max-width: 668px) {
+    .parent-stock {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        justify-items: center;
+    }
+
+    .category-textSpace {
+        padding-top: 10px;
+        padding-right: 0;
+        border-right: 0;
+    }
+
+    .category-responsive {
+        padding-bottom: 20px;
+        border-bottom: 3px solid;
+    }
+
+
+}
