@@ -8,7 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const AddItem = () => {
     const { register, handleSubmit, reset } = useForm();
-    console.log(useForm.register)
     const [user, loading, error] = useAuthState(auth);
     const onSubmit = data => {
         const url = ` https://sheltered-citadel-07680.herokuapp.com/inventory`;
@@ -35,8 +34,8 @@ const AddItem = () => {
                     <label className='mt-2 d-block text-start' htmlFor="productName">Product Name</label>
                     <input placeholder='Product Name' {...register("name")} required />
                     <label className='mt-2 d-block text-start' htmlFor="suplierName">Suplier Name</label>
-                    <input placeholder='Suplier Name' {...register("name")} required />
-                    <label className='mt-2 d-block text-start' htmlFor="suplierName">User Mail</label>
+                    <input placeholder='Suplier Name' {...register("suplier")} required />
+                    <label className='mt-2 d-block text-start' htmlFor="email">User Mail</label>
                     <input className='text-warning' {...register("email")} value={user?.email} readOnly />
                     <label className='mt-2 d-block text-start' htmlFor="price">Price</label>
                     <input placeholder='Price' type="number" {...register("price")} required />

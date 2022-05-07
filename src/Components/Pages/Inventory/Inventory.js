@@ -9,6 +9,7 @@ const Inventory = () => {
     const [item, setItem] = useState({});
     const { name, email, quantity, suplier, price, image, description } = item;
     const navigate = useNavigate();
+    // load item
     useEffect(() => {
         const url = `https://sheltered-citadel-07680.herokuapp.com/inventory/${id}`;
         fetch(url)
@@ -19,10 +20,33 @@ const Inventory = () => {
         navigate('/manageInventory');
 
     }
+    // decrease quantity
+    const decreaseQuantity = e => {
+        if (quantity === 0) {
+            toast('product stock out');
+        }
+        if (quantity > 0) {
+            let newQuantity = quantity - 1;
+            const newItem = { ...item, quantity: newQuantity };
+            setItem(newItem);
+            const url = `https://sheltered-citadel-07680.herokuapp.com/inventory/${id}`;
+            console.log(url);
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(newItem)
+            })
+        }
+    }
+
+
+    // quantity update
     const handleUpdateUser = e => {
         e.preventDefault();
         const valuQuantity = parseInt(e.target.quantity.value);
-        const newQuantity = quantity + valuQuantity;
+        let newQuantity = quantity + valuQuantity;
         const newItem = { ...item, quantity: newQuantity };
         setItem(newItem);
         console.log(valuQuantity)
@@ -60,7 +84,7 @@ const Inventory = () => {
                             <h4>Price: ${price}</h4>
                             <h5>Sold: <span className='text-warning'>No</span></h5>
                             <div className='py-2'>
-                                <button className='deliver-btn' >Delivered</button>
+                                <button onClick={decreaseQuantity} className='deliver-btn' >Delivered</button>
                             </div>
                             <hr />
                             <div className='py-2'>
