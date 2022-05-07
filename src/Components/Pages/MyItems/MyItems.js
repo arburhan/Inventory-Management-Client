@@ -20,7 +20,7 @@ const MyItems = () => {
     }, [user])
 
     return (
-        <div className='container py-3'>
+        <div className='container-fluid py-3'>
             <h2 className='text-center py-3'>Your Items Totaly:  {items.length} </h2>
             <div className=''>
                 <Table responsive striped bordered>
