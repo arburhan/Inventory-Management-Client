@@ -1,0 +1,14 @@
+.category-parent {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+@media screen and (max-width:668px) {
+    .category-parent {
+        display: grid;
+        flex-direction: column;
+    }
+}

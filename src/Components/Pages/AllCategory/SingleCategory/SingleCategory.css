@@ -1,0 +1,29 @@
+.category-div {
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: aquamarine;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.category-div img {
+    padding: 0px 10px;
+}
+
+.category-div:hover {
+    background-color: tomato;
+}
+
+@media screen and (max-width: 668px) {
+    .category-div {
+        display: flex;
+        flex-direction: column;
+        padding: 27px 57px;
+    }
+
+    .category-div img {
+        padding: 10px 10px;
+    }
+
+}
