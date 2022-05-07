@@ -6,8 +6,8 @@ import ItemTable from './ItemTable/ItemTable';
 const ManageInventory = () => {
     const [items] = useInventory();
     return (
-        <div className='container'>
-            <h2 className='text-center'>Manage Inventory</h2>
+        <div className='container py-2'>
+            <h2 className='text-center py-4'>Manage All Items</h2>
             <Table responsive striped bordered>
                 <thead>
                     <tr>
