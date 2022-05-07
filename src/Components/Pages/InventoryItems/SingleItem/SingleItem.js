@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SingleItem.css';
 
+
 const SingleItem = ({ item }) => {
     const navigate = useNavigate();
     const { _id, image, name, description, quantity, price, suplier } = item;

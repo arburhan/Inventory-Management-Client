@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import './Inventory.modules.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Inventory = () => {
     const { id } = useParams();
@@ -36,7 +38,8 @@ const Inventory = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                // e.target.reset();
+                toast('Quantity update successfully .')
+                e.target.reset();
             })
 
     }
@@ -73,7 +76,7 @@ const Inventory = () => {
                     </div>
                 </div>
             </div>
-
+            <ToastContainer />
         </div>
     );
 };
