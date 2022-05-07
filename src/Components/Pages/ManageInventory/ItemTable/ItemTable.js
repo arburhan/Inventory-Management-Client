@@ -1,9 +1,9 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table'
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import './ItemTable.css';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 const ItemTable = ({ item }) => {
     const { _id, name } = item;
@@ -33,7 +33,6 @@ const ItemTable = ({ item }) => {
                 <td onClick={() => { handleUpdate(_id) }} className='text-center'><button className='inventory-up manage-btn'>Update</button></td>
                 <td onClick={() => { deleteItem(_id) }} className='text-center'><button className='delete-btn manage-btn' >Delete</button></td>
             </tr>
-            <ToastContainer />
         </>
     );
 };

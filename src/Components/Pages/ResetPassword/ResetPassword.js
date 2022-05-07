@@ -2,10 +2,10 @@ import React, { useRef } from 'react';
 import Form from 'react-bootstrap/Form';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const ResetPassword = () => {
@@ -43,7 +43,6 @@ const ResetPassword = () => {
                     <button type='submit' className='btn submit-btn'>Send Reset Mail</button>
                 </div>
             </Form>
-            <ToastContainer />
         </div>
     );
 };

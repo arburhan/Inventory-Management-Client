@@ -13,6 +13,8 @@ import RequreAuth from './Components/Pages/RequreAuth/RequreAuth';
 import AddItem from './Components/Pages/AddItem/AddItem';
 import MyItems from './Components/Pages/MyItems/MyItems';
 import Footer from './Components/Shared/Footer/Footer';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -44,6 +46,7 @@ function App() {
         <Route path='/footer' element={<Footer></Footer>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <ToastContainer />
     </div>
   );
 }

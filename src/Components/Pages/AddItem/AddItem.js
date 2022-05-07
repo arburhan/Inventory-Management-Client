@@ -3,8 +3,7 @@ import { useForm } from "react-hook-form";
 import './AddItem.css';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 const AddItem = () => {
     const { register, handleSubmit, reset } = useForm();
@@ -49,7 +48,6 @@ const AddItem = () => {
                     </div>
                 </form>
             </div>
-            <ToastContainer />
         </div>
     );
 };

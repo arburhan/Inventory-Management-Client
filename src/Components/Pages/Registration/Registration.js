@@ -2,11 +2,10 @@ import React, { useRef, useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import Social from '../../Shared/Social/Social';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const Registration = () => {
     const nameRef = useRef();
@@ -81,7 +80,6 @@ const Registration = () => {
                 Already have an account? <button onClick={redirectLogin} className='signup-redirect'>Please Login</button>
             </div>
             <Social></Social>
-            <ToastContainer />
         </div>
     );
 };

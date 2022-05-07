@@ -97,7 +97,6 @@ const Inventory = () => {
                     </div>
                 </div>
             </div>
-            <ToastContainer />
         </div>
     );
 };
