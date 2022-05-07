@@ -10,7 +10,6 @@ const ItemTable = ({ item }) => {
     const navigate = useNavigate();
     const handleUpdate = id => {
         navigate(`/inventory/${_id}`);
-        console.log(id);
     }
     const deleteItem = id => {
         const procced = window.confirm('Are you sure delete this item? ');
@@ -22,7 +21,7 @@ const ItemTable = ({ item }) => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data)
+
                 })
         }
     }

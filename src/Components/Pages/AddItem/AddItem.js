@@ -20,7 +20,6 @@ const AddItem = () => {
         })
             .then(res => res.json())
             .then(result => {
-                console.log(result);
                 reset();
                 toast('Item added successfully !');
             })

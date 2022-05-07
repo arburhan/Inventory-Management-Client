@@ -30,7 +30,6 @@ const Inventory = () => {
             const newItem = { ...item, quantity: newQuantity };
             setItem(newItem);
             const url = `https://sheltered-citadel-07680.herokuapp.com/inventory/${id}`;
-            console.log(url);
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -50,7 +49,6 @@ const Inventory = () => {
         const newItem = { ...item, quantity: newQuantity };
         setItem(newItem);
         const url = `https://sheltered-citadel-07680.herokuapp.com/inventory/${id}`;
-        console.log(url);
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -60,7 +58,7 @@ const Inventory = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+
                 toast('Quantity update successfully .')
                 e.target.reset();
             })
