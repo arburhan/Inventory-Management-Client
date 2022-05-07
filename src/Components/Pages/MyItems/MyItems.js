@@ -2,6 +2,9 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import ItemTable from '../ManageInventory/ItemTable/ItemTable';
+import Table from 'react-bootstrap/Table'
+
 
 const MyItems = () => {
     const [items, setItems] = useState([]);
@@ -17,8 +20,25 @@ const MyItems = () => {
     }, [user])
 
     return (
-        <div>
-            <h2>Your Items {items.length} </h2>
+        <div className='container py-3'>
+            <h2 className='text-center py-3'>Your Items Totaly:  {items.length} </h2>
+            <div className=''>
+                <Table responsive striped bordered>
+                    <thead>
+                        <tr>
+                            <th>Item id</th>
+                            <th>Name</th>
+                            <th>Update Product</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            items.map(item => <ItemTable key={item._id} item={item}></ItemTable>)
+                        }
+                    </tbody>
+                </Table>
+            </div>
 
         </div>
     );
