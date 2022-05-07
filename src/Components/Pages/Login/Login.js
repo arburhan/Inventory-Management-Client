@@ -24,11 +24,11 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     let errorElement;
-    const handleLogIn = e => {
+    const handleLogIn = async e => {
         e.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
         if (user) {
             navigate(from, { replace: true });
 
