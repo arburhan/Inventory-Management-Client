@@ -12,6 +12,7 @@ import Inventory from './Components/Pages/Inventory/Inventory';
 import RequreAuth from './Components/Pages/RequreAuth/RequreAuth';
 import AddItem from './Components/Pages/AddItem/AddItem';
 import MyItems from './Components/Pages/MyItems/MyItems';
+import Footer from './Components/Shared/Footer/Footer';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           </RequreAuth>
         }></Route>
         <Route path='/additem' element={<AddItem></AddItem>}></Route>
+        <Route path='/footer' element={<Footer></Footer>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>

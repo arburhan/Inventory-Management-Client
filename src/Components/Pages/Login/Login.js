@@ -29,13 +29,13 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         await signInWithEmailAndPassword(email, password);
-        if (user) {
-            navigate(from, { replace: true });
-
-        }
         if (loading) {
             return <Loading></Loading>
         }
+        if (user) {
+            navigate(from, { replace: true });
+        }
+
     }
     if (error) {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
