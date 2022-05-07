@@ -25,7 +25,6 @@ const ItemTable = ({ item }) => {
                     console.log(data)
                 })
         }
-        console.log('delete :)', id);
     }
     return (
         <>
