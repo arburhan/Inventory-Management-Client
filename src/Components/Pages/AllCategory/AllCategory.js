@@ -16,8 +16,11 @@ const AllCategory = () => {
     }, [])
     return (
         <div className='py-4 container'>
-            <h2 className='text-center py-3'>All Products Category</h2>
-            <div className='category-parent'>
+            <div className='text-center my-5'>
+                <h2>All Products Category</h2>
+                <p className='pt-1'>Tap on the category to show its product. This feature will be added very quickly.</p>
+            </div>
+            <div className='category-parent my-5'>
                 {
                     categories.map(category => <SingleCategory key={category._id} category={category}></SingleCategory>)
                 }
