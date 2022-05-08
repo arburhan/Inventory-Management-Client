@@ -1,5 +1,6 @@
 import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
+import Table from 'react-bootstrap/Table'
 const Blogs = () => {
     return (
         <div className='container'>
@@ -23,7 +24,45 @@ const Blogs = () => {
                         <h2 className='my-3'>
                             What is the differences between sql and nosql databases?
                         </h2>
+                        <Table striped bordered hover>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
 
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>sql এর পুর্ন রূপ হল structured query language</td>
+                                    <td>nosql এর পুর্নরূপ হল not only structured query language</td>
+
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>RELATIONAL DATABASE MANAGEMENT SYSTEM (RDBMS)</td>
+                                    <td>Non-relational or distributed database system.</td>
+
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>These databases are not suited for hierarchical data storage.</td>
+                                    <td>These databases are best suited for hierarchical data storage.</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>These databases are best suited for complex queries</td>
+                                    <td>These databases are not so good for complex queries</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Follows ACID property</td>
+                                    <td>Follows CAP(consistency, availability, partition tolerance)</td>
+                                </tr>
+                            </tbody>
+                        </Table>
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
