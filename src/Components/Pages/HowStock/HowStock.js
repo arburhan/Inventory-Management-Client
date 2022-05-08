@@ -7,7 +7,7 @@ const HowStock = () => {
         window.open('https://www.wikihow.com/Stock-Grocery-Shelves');
     }
     return (
-        <div className='py-5'>
+        <div className='py-3'>
             <h2 className='text-center'>How We Stock !</h2>
             <div className='how-stock-parent pb-4'>
                 <div className='px-2 px-md-4 text-center text-md-start'>
