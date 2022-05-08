@@ -15,7 +15,7 @@ const Social = () => {
         signInWithGoogle();
     }
     if (googleUser) {
-        navigate('/home');
+        navigate(from, { replace: true });
     }
     if (googleError) {
         errors = googleError.message;
