@@ -21,8 +21,10 @@ const Inventory = () => {
 
     }
     // decrease quantity
+    let stockOut;
     const decreaseQuantity = e => {
         if (quantity === 0) {
+            stockOut = 'Stock Out';
             toast('product stock out');
         }
         if (quantity > 0) {
