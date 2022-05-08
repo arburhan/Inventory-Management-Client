@@ -26,7 +26,7 @@ const ResetPassword = () => {
         return <Loading></Loading>
     } */
     if (errorPassReset) {
-        errorElement = <p className='text-danger'>Error: {errorPassReset?.message}</p>
+        errorElement = <p className='text-danger'> {errorPassReset?.message}</p>
     }
     return (
         <div className='container mx-auto w-75 py-5'>

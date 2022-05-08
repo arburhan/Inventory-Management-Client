@@ -43,7 +43,7 @@ const Registration = () => {
     }
 
     if (error || verifyError) {
-        errorElement = <p className='text-danger'>Error: {error?.message} {verifyError?.message}</p>
+        errorElement = <p className='text-danger'> {error?.message} {verifyError?.message}</p>
     }
     const redirectLogin = () => {
         navigate('/login');
