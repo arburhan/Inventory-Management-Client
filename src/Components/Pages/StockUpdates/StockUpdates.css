@@ -1,7 +1,10 @@
 .parent-stock {
     background-image: url(./bg-3.jpg);
     background-repeat: no-repeat;
-    padding: 80px 5px;
+}
+
+.parent-stock-div {
+    padding: 70px 5px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -12,7 +15,7 @@
 }
 
 @media screen and (max-width: 668px) {
-    .parent-stock {
+    .parent-stock-div {
         display: grid;
         grid-template-columns: repeat(2, 2fr);
         justify-items: center;
