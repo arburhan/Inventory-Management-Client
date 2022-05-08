@@ -66,18 +66,14 @@ const Blogs = () => {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
-                    <Accordion.Header>Question #2</Accordion.Header>
+                    <Accordion.Header>Question #3</Accordion.Header>
                     <Accordion.Body>
                         <h2 className='my-3'>
                             What is the purpose of JWT and how does it work?
                         </h2>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                        est laborum.
+                        jwt হল json web tokens. যা json অবজেক্ট হিসেবে পক্ষগুলির মধ্যে নিরাপদে তথ্য প্রেরনের জন্য একটি কম্প্যাক্ট এবং সয়ংসম্পুর্ন উপায় তৈরি করে । এই তথ্য যাচাই এবং বিশ্বাস করা যেতে পারে কারন এটি ডিজিটাল স্বাক্ষরিত । jwts একটি গোপন algorithm ECDSA or RSA ব্যবহার করে পাবলিক/প্রাইভেট কী জোড়া ব্যবহার করে স্বাক্ষর করা যেতে পারে ।
+                        jwt যেভাবে কাজ করেঃ
+                        ক্লায়েন্ট সাইডে ইউজার লগইন করার সময় server jwt টোকেন জেনারেট করে । তারপর এই টোকেন সার্ভার রিটার্ন করে । যদি টোকেন মিলে যায় তাহলে তা ভ্যালিড হয় ।
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
