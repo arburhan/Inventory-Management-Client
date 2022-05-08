@@ -46,7 +46,7 @@ function App() {
         <Route path='/footer' element={<Footer></Footer>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
-      <ToastContainer />
+      <ToastContainer className='d-none'></ToastContainer>
     </div>
   );
 }
