@@ -30,7 +30,7 @@ const ItemTable = ({ item }) => {
             <tr>
                 <td>{_id}</td>
                 <td>{name}</td>
-                <td onClick={() => { handleUpdate(_id) }} className='text-center'><button className='inventory-up manage-btn'>Update</button></td>
+                <td onClick={() => { handleUpdate(_id) }} className='text-center'><button className='inventory-up manage-btn'>Add Stock</button></td>
                 <td onClick={() => { deleteItem(_id) }} className='text-center'><button className='delete-btn manage-btn' >Delete</button></td>
             </tr>
         </>
