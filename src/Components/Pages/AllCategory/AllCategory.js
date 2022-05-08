@@ -5,7 +5,6 @@ import './AllCategory.css';
 
 const AllCategory = () => {
     const [categories, setCategories] = useState([]);
-    console.log(categories);
     useEffect(() => {
         const allCategories = async () => {
             const url = `https://sheltered-citadel-07680.herokuapp.com/allcategory`;

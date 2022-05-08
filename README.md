@@ -20,7 +20,7 @@
 - React Router
 - React Firebase Hooks
 - React Toast
-- Firebase
+- Firebase Authentication
 - Nodejs
 - Express
 - Mongodb
