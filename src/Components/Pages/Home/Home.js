@@ -16,7 +16,6 @@ const Home = () => {
             <HowStock></HowStock>
             <StockUpdates></StockUpdates>
             <Features></Features>
-            <Footer></Footer>
         </div>
     );
 };
