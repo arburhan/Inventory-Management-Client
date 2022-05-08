@@ -1,6 +1,8 @@
-# [AR Grocery]()
+# [AR Grocery](https://inventory-management-7b51a.web.app/)
 
-## Live link []
+## Live link [https://inventory-management-7b51a.web.app/]
+## Server side code[https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-arburhan]
+
 ### Features:
 - Full Responsive
 - Firebase Authentication 
