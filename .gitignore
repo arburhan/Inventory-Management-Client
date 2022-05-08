@@ -4,6 +4,7 @@
 InventoryItem.json
 allproducts.json
 
+.env
 
 # dependencies
 /node_modules

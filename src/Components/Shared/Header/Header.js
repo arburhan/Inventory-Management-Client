@@ -4,9 +4,9 @@ import Navbar from 'react-bootstrap/Navbar'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
-import auth from '../../firebase.init';
 import './Header.css';
 import avatar from '../../../Images/user.png';
+import auth from '../../../firebase.init';
 
 
 const Header = () => {

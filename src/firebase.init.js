@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCUtEVNJJ_8FVMKsZXRgVCmZgrfu6jaQRg",
-    authDomain: "inventory-management-7b51a.firebaseapp.com",
-    projectId: "inventory-management-7b51a",
-    storageBucket: "inventory-management-7b51a.appspot.com",
-    messagingSenderId: "881679812915",
-    appId: "1:881679812915:web:13e6106edfeaa766715646"
+    apiKey: `process.env.apiKey`,
+    authDomain: `process.env.authDomain`,
+    projectId: `process.env.projectId`,
+    storageBucket: `process.env.storageBucket`,
+    messagingSenderId: `process.env.messagingSenderId`,
+    appId: `process.env.appId`,
 };
 
 // Initialize Firebase

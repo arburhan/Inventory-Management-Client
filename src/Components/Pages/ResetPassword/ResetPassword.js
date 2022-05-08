@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import auth from '../../firebase.init';
+import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 
 

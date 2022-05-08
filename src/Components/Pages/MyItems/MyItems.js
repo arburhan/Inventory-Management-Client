@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init';
 import ItemTable from '../ManageInventory/ItemTable/ItemTable';
 import Table from 'react-bootstrap/Table'
+import auth from '../../../firebase.init';
 
 
 const MyItems = () => {
