@@ -32,6 +32,9 @@ const Login = () => {
         }
         if (user) {
             navigate(from, { replace: true });
+            // store access token
+            localStorage.setItem('accessToken', user.user.accessToken);
+            console.log(user.user.accessToken)
         }
 
     }
