@@ -53,7 +53,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className='text-center'>
+                <div className='text-center py-3 py-md-0'>
                     <form onSubmit={handleFooterForm}>
                         <input placeholder='email' style={{ width: '300px' }} className='footer-input' type="email" /> <br />
                         <input style={{ width: '200px', borderRadius: '45px' }} className='my-3' type="submit" value="Subscribe" />
