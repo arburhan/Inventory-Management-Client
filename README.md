@@ -4,10 +4,10 @@
 ## Server side code[https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-arburhan]
 
 
-# Description:  
+## Description:  
 AR Grocery is a stock management website. Here the user will be able to increase the quantity of products after logging in, will be able to count how many deliveries have been made, will be able to add and view different user based products, will be able to delete products. This is a fully responsive website. Mongodb has been chosen as the firebase authentication system, database. Hope you like it :)
 
-### Features:
+## Features:
 - Full Responsive
 - Firebase Authentication 
 - Email register method
