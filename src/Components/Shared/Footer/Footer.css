@@ -1,3 +1,12 @@
+.parent-footer {
+    display: flex;
+    justify-content: space-evenly
+}
+
+.footer-input {
+    width: 100px;
+}
+
 .footer-btn {
     color: white;
     background-color: transparent;
@@ -11,4 +20,18 @@
 
 .footer-btn:hover {
     border-bottom: 2px solid tomato;
+}
+
+
+.icon-width {
+    width: 25px;
+    margin: 5px;
+}
+
+@media screen and (max-width:668px) {
+    .parent-footer {
+        display: flex;
+        flex-direction: column;
+    }
+
 }
