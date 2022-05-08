@@ -42,11 +42,15 @@ function App() {
             <MyItems></MyItems>
           </RequreAuth>
         }></Route>
-        <Route path='/additem' element={<AddItem></AddItem>}></Route>
+        <Route path='/additem' element={
+          <RequreAuth>
+            <AddItem></AddItem>
+          </RequreAuth>
+        }></Route>
         <Route path='/footer' element={<Footer></Footer>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
-      <ToastContainer className='d-none'></ToastContainer>
+      <ToastContainer />
     </div>
   );
 }
