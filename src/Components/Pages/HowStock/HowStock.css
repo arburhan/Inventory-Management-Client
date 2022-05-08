@@ -1,5 +1,5 @@
 .img-div-stock img {
-    width: 600px;
+    width: 95%;
 }
 
 .stock-text {
@@ -25,7 +25,30 @@
 .how-stock-parent {
     padding: 0px 50px;
     display: grid;
+    gap: 10px;
     align-items: center;
     justify-content: center;
     grid-template-columns: 1fr 1fr;
+}
+
+/* responsive */
+
+@media screen and (max-width:668px) {
+    .img-div-stock img {
+        width: 90%;
+    }
+
+    .monitor-btn {
+        padding: 15px 40px;
+    }
+
+    .how-stock-parent {
+        padding: 0px 20px;
+        display: flex;
+        gap: 30px;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
