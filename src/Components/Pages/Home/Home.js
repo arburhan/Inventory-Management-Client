@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../../Shared/Footer/Footer';
 import AllCategory from '../AllCategory/AllCategory';
+import Features from '../Features/Features';
 import HowStock from '../HowStock/HowStock';
 import InventoryItems from '../InventoryItems/InventoryItems';
 import StockUpdates from '../StockUpdates/StockUpdates';
@@ -14,6 +15,7 @@ const Home = () => {
             <AllCategory></AllCategory>
             <HowStock></HowStock>
             <StockUpdates></StockUpdates>
+            <Features></Features>
             <Footer></Footer>
         </div>
     );

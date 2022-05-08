@@ -1,0 +1,15 @@
+.parent-feature-div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.service {
+    background-color: rgba(255, 248, 220, 0.747);
+    padding: 15px 20px;
+    border-radius: 20px;
+}
+
+.service img {
+    width: 200px;
+}
