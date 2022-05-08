@@ -1,0 +1,8 @@
+.addNew-btn {
+    border: 2px solid darkcyan;
+    padding: 18px 90px;
+}
+
+.addNew-btn:hover {
+    background-color: darkcyan;
+}
