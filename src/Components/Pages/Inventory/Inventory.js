@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Inventory = () => {
     const { id } = useParams();
     const [item, setItem] = useState({});
-    const { name, email, quantity, suplier, price, image, description } = item;
+    const { name, quantity, suplier, price, image, description } = item;
     const navigate = useNavigate();
     // load item
     useEffect(() => {
@@ -21,10 +21,8 @@ const Inventory = () => {
 
     }
     // decrease quantity
-    let stockOut;
     const decreaseQuantity = e => {
         if (quantity === 0) {
-            stockOut = 'Stock Out';
             toast('product stock out');
         }
         if (quantity > 0) {
@@ -81,7 +79,9 @@ const Inventory = () => {
                             <h5>Suplier: {suplier}</h5>
                             <h5>Quantity: {quantity} pc's</h5>
                             <h4>Price: ${price}</h4>
-                            <h5>Sold: <span className='text-warning'>No</span></h5>
+                            <h5>Sold: <span className='text-warning'>{
+                                quantity === 0 ? 'All Sold' : 'No'
+                            }</span></h5>
                             <div className='py-2'>
                                 <button onClick={decreaseQuantity} className='deliver-btn' >Delivered</button>
                             </div>
