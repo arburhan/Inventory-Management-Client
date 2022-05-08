@@ -1,5 +1,14 @@
 .footer-btn {
     color: white;
     background-color: transparent;
-    border: 0;
+    border: 2px solid transparent;
+    transition: .2s linear;
+}
+
+.footer-link-text {
+    border-bottom: 2px solid tomato;
+}
+
+.footer-btn:hover {
+    border-bottom: 2px solid tomato;
 }

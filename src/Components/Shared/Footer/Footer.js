@@ -4,9 +4,6 @@ import './Footer.css';
 
 const Footer = () => {
     const navigate = useNavigate();
-    const redirectHome = () => {
-        navigate('/home');
-    }
     const redireBlogs = () => {
         navigate('/blogs');
     }
@@ -19,18 +16,20 @@ const Footer = () => {
     return (
         <div className='bg-dark text-light'>
             <div>
-                <h5>Useful Links</h5>
                 <div>
-                    <button onClick={redirectHome} className='footer-btn'>Home</button>
+                    <h5 className='footer-link-text'>Useful Links</h5>
+                    <div className=''>
+                        <button onClick={redireBlogs} className='footer-btn'>Blogs</button>
+                    </div>
+                    <div className=''>
+                        <button onClick={redirectLogin} className='footer-btn'>Login</button>
+                    </div>
+                    <div className=''>
+                        <button onClick={redirectAbout} className='footer-btn'>About</button>
+                    </div>
                 </div>
                 <div>
-                    <button onClick={redireBlogs} className='footer-btn'>Blogs</button>
-                </div>
-                <div>
-                    <button onClick={redirectLogin} className='footer-btn'>Login</button>
-                </div>
-                <div>
-                    <button onClick={redirectAbout} className='footer-btn'>About</button>
+
                 </div>
             </div>
 
