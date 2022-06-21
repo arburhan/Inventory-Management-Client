@@ -17,7 +17,7 @@ const MyItems = () => {
             setItems(data);
         }
         filterItem();
-    }, [items])
+    }, [items, email])
 
     return (
         <div className='container-fluid py-3'>
