@@ -1,7 +1,7 @@
 # [AR Grocery](https://inventory-management-7b51a.web.app/)
 
 ## Live link [https://inventory-management-7b51a.web.app/]
-## Server side code[https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-arburhan]
+## Server side code[https://github.com/arburhan/Inventory-Management-Server.git]
 
 
 ## Description:  

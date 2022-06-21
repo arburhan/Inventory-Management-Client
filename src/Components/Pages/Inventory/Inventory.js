@@ -59,7 +59,6 @@ const Inventory = () => {
         })
             .then(res => res.json())
             .then(data => {
-
                 toast('Quantity update successfully .')
                 e.target.reset();
             })
