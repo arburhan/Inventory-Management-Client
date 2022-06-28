@@ -1,18 +1,17 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import SingleCategory from './SingleCategory/SingleCategory';
 import './AllCategory.css';
 
 const AllCategory = () => {
     const [categories, setCategories] = useState([]);
-    useEffect(() => {
-        const allCategories = async () => {
-            const url = `https://sheltered-citadel-07680.herokuapp.com/allcategory`;
-            const { data } = await axios.get(url);
-            setCategories(data)
-        }
-        allCategories();
-    }, [])
+
+    fetch(`https://sheltered-citadel-07680.herokuapp.com/allcategory`, {
+        method: 'GET',
+    })
+        .then(res => res.json()
+            .then(data => setCategories(data))
+        )
+
     return (
         <div className='py-4 container'>
             <div className='text-center my-5'>
