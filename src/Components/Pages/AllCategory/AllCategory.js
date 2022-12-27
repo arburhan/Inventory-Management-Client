@@ -5,7 +5,7 @@ import './AllCategory.css';
 const AllCategory = () => {
     const [categories, setCategories] = useState([]);
 
-    fetch(`https://sheltered-citadel-07680.herokuapp.com/allcategory`, {
+    fetch(`https://inventory-management-server.onrender.com/allcategory`, {
         method: 'GET',
     })
         .then(res => res.json()

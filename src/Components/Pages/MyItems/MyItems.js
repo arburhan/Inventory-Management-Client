@@ -12,7 +12,7 @@ const MyItems = () => {
     const email = user?.email;
     useEffect(() => {
         const filterItem = async () => {
-            const url = ` https://sheltered-citadel-07680.herokuapp.com/myitems?email=${email}`;
+            const url = ` https://inventory-management-server.onrender.com/myitems?email=${email}`;
             const { data } = await axios.get(url);
             setItems(data);
         }

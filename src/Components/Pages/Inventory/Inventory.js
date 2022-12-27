@@ -11,7 +11,7 @@ const Inventory = () => {
     const navigate = useNavigate();
     // load item
     useEffect(() => {
-        const url = `https://sheltered-citadel-07680.herokuapp.com/inventory/${id}`;
+        const url = `https://inventory-management-server.onrender.com/inventory/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data))
@@ -30,7 +30,7 @@ const Inventory = () => {
             const newItem = { ...item, quantity: newQuantity };
             setItem(newItem);
             toast('product deliverd');
-            const url = `https://sheltered-citadel-07680.herokuapp.com/inventory/${id}`;
+            const url = `https://inventory-management-server.onrender.com/inventory/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -49,7 +49,7 @@ const Inventory = () => {
         let newQuantity = parseInt(quantity) + valuQuantity;
         const newItem = { ...item, quantity: newQuantity };
         setItem(newItem);
-        const url = `https://sheltered-citadel-07680.herokuapp.com/inventory/${id}`;
+        const url = `https://inventory-management-server.onrender.com/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

@@ -14,7 +14,7 @@ const ItemTable = ({ item }) => {
     const deleteItem = id => {
         const procced = window.confirm('Are you sure delete this item? ');
         if (procced) {
-            const url = `https://sheltered-citadel-07680.herokuapp.com/inventory/${id}`;
+            const url = `https://inventory-management-server.onrender.com/inventory/${id}`;
             toast('Item Delete Successfully.')
             fetch(url, {
                 method: 'DELETE',

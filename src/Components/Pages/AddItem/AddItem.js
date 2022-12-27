@@ -9,7 +9,7 @@ const AddItem = () => {
     const { register, handleSubmit, reset } = useForm();
     const [user] = useAuthState(auth);
     const onSubmit = data => {
-        const url = ` https://sheltered-citadel-07680.herokuapp.com/inventory`;
+        const url = ` https://inventory-management-server.onrender.com/inventory`;
         fetch(url, {
             method: 'POST',
             headers: {
