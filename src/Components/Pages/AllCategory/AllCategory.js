@@ -5,7 +5,7 @@ import './AllCategory.css';
 const AllCategory = () => {
     const [categories, setCategories] = useState([]);
 
-    fetch(`https://inventory-management-server.onrender.com/allcategory`, {
+    fetch(`https://inventory-management-server-alpha.vercel.app/allcategory`, {
         method: 'GET',
     })
         .then(res => res.json()

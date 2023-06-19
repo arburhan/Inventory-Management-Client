@@ -9,7 +9,7 @@ const AddItem = () => {
     const { register, handleSubmit, reset } = useForm();
     const [user] = useAuthState(auth);
     const onSubmit = data => {
-        const url = ` https://inventory-management-server.onrender.com/inventory`;
+        const url = ` https://inventory-management-server-alpha.vercel.app/inventory`;
         fetch(url, {
             method: 'POST',
             headers: {

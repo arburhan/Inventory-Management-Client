@@ -14,7 +14,7 @@ const ItemTable = ({ item }) => {
     const deleteItem = id => {
         const procced = window.confirm('Are you sure delete this item? ');
         if (procced) {
-            const url = `https://inventory-management-server.onrender.com/inventory/${id}`;
+            const url = `https://inventory-management-server-alpha.vercel.app/inventory/${id}`;
             toast('Item Delete Successfully.')
             fetch(url, {
                 method: 'DELETE',
